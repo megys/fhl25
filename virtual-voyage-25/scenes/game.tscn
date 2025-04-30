@@ -1,22 +1,88 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqxi678fw4cd0"]
+[gd_scene load_steps=10 format=3 uid="uid://bqxi678fw4cd0"]
 
+[ext_resource type="Texture2D" uid="uid://bdy0ohsvi84kh" path="res://assets/tanisha assets/art/LightSkyLoop.png" id="1_iywne"]
+[ext_resource type="Script" uid="uid://chaovihahiqem" path="res://scripts/FogMove.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://c3kqxijua7img" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://c40do7uon803d" path="res://assets/tanisha assets/art/HouseLoop.PNG" id="2_p57ef"]
 [ext_resource type="PackedScene" uid="uid://bti2vl27ephuh" path="res://scenes/coin.tscn" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://c8qk3k6l23w6i" path="res://assets/tanisha assets/art/FogLoop.PNG" id="3_p57ef"]
+[ext_resource type="Texture2D" uid="uid://b1xd0ebd3jads" path="res://assets/tanisha assets/art/Boxes-Large.png" id="4_lbhrr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
+normal = Vector2(1, 0)
+distance = -696.0
+
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(5280, 0)
+script = ExtResource("1_u5sy4")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_iywne")
+
+[node name="Houses" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(2298.8, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Houses"]
+position = Vector2(0, 54)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_p57ef")
+
+[node name="Behind Fog" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(2000, 0)
+script = ExtResource("1_u5sy4")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Behind Fog"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_p57ef")
+
+[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(1, 167)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_bottom = 320
+editor_draw_limits = true
 
 [node name="Coin" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(57, 12)
+position = Vector2(323, 262)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Scene Boundaries" type="Node" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 23)
+[node name="Floor Boundary" type="StaticBody2D" parent="Scene Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Boundaries/Floor Boundary"]
+position = Vector2(0, 298)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="Left Boundary" type="StaticBody2D" parent="Scene Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Boundaries/Left Boundary"]
+shape = SubResource("WorldBoundaryShape2D_lnu2h")
+
+[node name="Boundry Box" type="Sprite2D" parent="Scene Boundaries"]
+position = Vector2(-1037, 66)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_lbhrr")
+
+[node name="ParallaxForeground" type="ParallaxBackground" parent="."]
+layer = 1
+
+[node name="Front Fog" type="ParallaxLayer" parent="ParallaxForeground"]
+motion_scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(2000, 0)
+script = ExtResource("1_u5sy4")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxForeground/Front Fog"]
+position = Vector2(0, 69)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_p57ef")
+flip_h = true
