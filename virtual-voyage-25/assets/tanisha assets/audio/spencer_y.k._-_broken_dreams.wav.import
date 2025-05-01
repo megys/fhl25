@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpjlj6uoa04ki"
+path="res://.godot/imported/spencer_y.k._-_broken_dreams.wav-4eab8e39f496db4e62e359e96391b630.sample"
+
+[deps]
+
+source_file="res://assets/tanisha assets/audio/spencer_y.k._-_broken_dreams.wav"
+dest_files=["res://.godot/imported/spencer_y.k._-_broken_dreams.wav-4eab8e39f496db4e62e359e96391b630.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

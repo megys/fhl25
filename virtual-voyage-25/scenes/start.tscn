@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://nvcf36qc5s4a"]
+
+[ext_resource type="Texture2D" uid="uid://6u4dcf1y0x5c" path="res://assets/tanisha assets/art/DarkSkyLoop.png" id="1_bodal"]
+[ext_resource type="Texture2D" uid="uid://dbbyh37civ2wb" path="res://assets/tanisha assets/art/BG-HouseGroundLoop.png" id="2_kdmts"]
+[ext_resource type="FontFile" uid="uid://2m3agwgeselk" path="res://assets/tanisha assets/font/Abel-Regular.ttf" id="3_0auqf"]
+
+[node name="Start" type="Node2D"]
+
+[node name="Sky" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_bodal")
+
+[node name="Houses" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_kdmts")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -233.0
+offset_top = 81.0
+offset_right = 240.0
+offset_bottom = 226.0
+theme_override_fonts/normal_font = ExtResource("3_0auqf")
+theme_override_font_sizes/normal_font_size = 100
+text = "Light Horror"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = 219.0
+offset_right = 46.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_0auqf")
+theme_override_font_sizes/font_size = 40
+text = "begin"
