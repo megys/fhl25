@@ -4,8 +4,12 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -250
 
+signal died
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
+@onready var death_timer: Timer = $"Death Timer"
 
 var active = true
 var is_alive = true
@@ -46,13 +50,16 @@ func pickup_animation():
 	animated_sprite.play("pick up")
 	timer.start()
 	
-func death_animation():
-	is_alive = false
-	animated_sprite.play("death")
-	
 func _on_timer_timeout() -> void:
 	if is_alive:
 		active = true
 		animated_sprite.play("default")
 	
+func death_animation():
+	is_alive = false
+	animated_sprite.play("death")
+	death_timer.start()
 	
+func _on_death_timer_timeout() -> void:
+	died.emit()
+	queue_free()

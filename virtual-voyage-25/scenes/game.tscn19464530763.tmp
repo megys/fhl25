@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bqxi678fw4cd0"]
+[gd_scene load_steps=26 format=3 uid="uid://bqxi678fw4cd0"]
 
 [ext_resource type="Texture2D" uid="uid://bdy0ohsvi84kh" path="res://assets/tanisha assets/art/LightSkyLoop.png" id="1_iywne"]
 [ext_resource type="Script" uid="uid://chaovihahiqem" path="res://scripts/FogMove.gd" id="1_u5sy4"]
@@ -20,234 +20,10 @@
 [ext_resource type="Script" uid="uid://blt82xthl1ry3" path="res://scripts/win_button.gd" id="9_5newe"]
 [ext_resource type="Texture2D" uid="uid://0f05yeqffbsb" path="res://assets/tanisha assets/art/Boxes-Small.png" id="10_kvuet"]
 [ext_resource type="Script" uid="uid://cgtvxlmr3ckmj" path="res://scripts/countdown.gd" id="12_dinhu"]
-[ext_resource type="PackedScene" uid="uid://qh4h4cg7ffi6" path="res://scenes/lampOn.tscn" id="15_5newe"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rysoc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kice"]
-
-[sub_resource type="Animation" id="Animation_8jfef"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Transition/Transition Block:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Transition/Transition Block:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/End Screens/Win Screen:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer/End Screens/Time Die Screen:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_1kice"]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Transition/Transition Block:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Transition/Transition Block:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_5newe"]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Transition/Transition Block:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Transition/Transition Block:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_37s47"]
-resource_name = "win_fade_out_and_in"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Transition/Transition Block:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Transition/Transition Block:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/End Screens/Win Screen:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-
-[sub_resource type="Animation" id="Animation_bt5mj"]
-resource_name = "time_fade_out_and_in"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Transition/Transition Block:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Transition/Transition Block:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/End Screens/Time Die Screen:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-
-[sub_resource type="Animation" id="Animation_e1j6l"]
-resource_name = "light_fade_out_and_in"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Transition/Transition Block:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Transition/Transition Block:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qfvu4"]
-_data = {
-&"RESET": SubResource("Animation_8jfef"),
-&"fade_in": SubResource("Animation_1kice"),
-&"fade_out": SubResource("Animation_5newe"),
-&"light_fade_out_and_in": SubResource("Animation_e1j6l"),
-&"time_fade_out_and_in": SubResource("Animation_bt5mj"),
-&"win_fade_out_and_in": SubResource("Animation_37s47")
-}
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 
@@ -383,30 +159,15 @@ text = "X Seconds Remaining"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Transition" type="AnimationPlayer" parent="GameManager/CanvasLayer"]
-root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_qfvu4")
-}
-
-[node name="Transition Block" type="ColorRect" parent="GameManager/CanvasLayer/Transition"]
-z_index = 100
-offset_left = -1274.0
-offset_top = -668.0
-offset_right = 1518.0
-offset_bottom = 859.0
-color = Color(0, 0, 0, 1)
-
 [node name="Win Timer" type="Timer" parent="GameManager"]
-wait_time = 1.5
+wait_time = 1.4
 one_shot = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, 171)
 motion_scale = Vector2(0, 0)
-motion_mirroring = Vector2(8801, 0)
+motion_mirroring = Vector2(5280, 0)
 script = ExtResource("1_u5sy4")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
@@ -432,9 +193,6 @@ texture = ExtResource("3_p57ef")
 
 [node name="Lamps" type="Node" parent="."]
 
-[node name="LampOn" parent="Lamps" instance=ExtResource("15_5newe")]
-position = Vector2(-676, 368)
-
 [node name="Lamp4" parent="Lamps" instance=ExtResource("6_gee14")]
 position = Vector2(4214, 373)
 
@@ -450,16 +208,13 @@ position = Vector2(411, 368)
 [node name="Lamp5" parent="Lamps" instance=ExtResource("6_gee14")]
 position = Vector2(411, 368)
 
-[node name="LampOn2" parent="Lamps" instance=ExtResource("15_5newe")]
-position = Vector2(6014, 358)
-
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 1
 position = Vector2(1, 167)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-limit_left = -850
-limit_right = 6120
+limit_left = -730
+limit_right = 5940
 limit_bottom = 320
 editor_draw_limits = true
 
@@ -547,28 +302,26 @@ position = Vector2(0, 298)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
 
 [node name="Right Boundary" type="StaticBody2D" parent="Scene Boundaries"]
-position = Vector2(6184, 144)
+position = Vector2(5907, 144)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Boundaries/Right Boundary"]
-position = Vector2(-103, 2)
 shape = SubResource("WorldBoundaryShape2D_kvuet")
 
 [node name="Left Boundary" type="StaticBody2D" parent="Scene Boundaries"]
-position = Vector2(-793, 154)
+position = Vector2(-703, 154)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Boundaries/Left Boundary"]
 shape = SubResource("WorldBoundaryShape2D_trtic")
 
 [node name="Boundry Box" type="Sprite2D" parent="Scene Boundaries"]
-position = Vector2(-1122, 66)
+position = Vector2(-1037, 66)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_lbhrr")
 
 [node name="ParallaxForeground" type="ParallaxBackground" parent="."]
-layer = 0
+layer = 1
 
 [node name="Front Fog" type="ParallaxLayer" parent="ParallaxForeground"]
-z_index = 50
 motion_scale = Vector2(1.2, 1.2)
 motion_mirroring = Vector2(2000, 0)
 script = ExtResource("1_u5sy4")
@@ -583,6 +336,5 @@ flip_h = true
 [connection signal="button_up" from="GameManager/CanvasLayer/End Screens/Time Die Screen/Button" to="GameManager/CanvasLayer/End Screens/Time Die Screen" method="_on_button_button_up"]
 [connection signal="button_up" from="GameManager/CanvasLayer/End Screens/Light Die Screen/Light Button" to="GameManager/CanvasLayer/End Screens/Light Die Screen" method="_on_light_button_button_up"]
 [connection signal="button_up" from="GameManager/CanvasLayer/End Screens/Win Screen/Win Button" to="GameManager/CanvasLayer/End Screens/Win Screen" method="_on_win_button_button_up"]
-[connection signal="animation_finished" from="GameManager/CanvasLayer/Transition" to="GameManager" method="_on_transition_animation_finished"]
 [connection signal="timeout" from="GameManager/Win Timer" to="GameManager" method="_on_win_timer_timeout"]
 [connection signal="died" from="Player" to="GameManager" method="_on_player_died"]

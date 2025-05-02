@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://qh4h4cg7ffi6"]
+
+[ext_resource type="Texture2D" uid="uid://c2vo37hoqsd2t" path="res://assets/tanisha assets/art/Lamp - Light Off.png" id="1_snl31"]
+[ext_resource type="Texture2D" uid="uid://c52pw2hxs0xgo" path="res://assets/tanisha assets/art/Lamp - SlimLight On.png" id="2_okrsh"]
+[ext_resource type="PackedScene" uid="uid://d185a48cvru65" path="res://scenes/killzone.tscn" id="3_n3pyu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxjgs"]
+size = Vector2(171, 682)
+
+[node name="LampOn" type="Node2D"]
+
+[node name="off" type="Sprite2D" parent="."]
+texture = ExtResource("1_snl31")
+
+[node name="on" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.415686)
+texture = ExtResource("2_okrsh")
+
+[node name="Killzone" parent="on" instance=ExtResource("3_n3pyu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="on/Killzone"]
+position = Vector2(-0.5, -114)
+shape = SubResource("RectangleShape2D_hxjgs")

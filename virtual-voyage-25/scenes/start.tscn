@@ -1,44 +1,467 @@
-[gd_scene load_steps=4 format=3 uid="uid://nvcf36qc5s4a"]
+[gd_scene load_steps=21 format=3 uid="uid://nvcf36qc5s4a"]
 
-[ext_resource type="Texture2D" uid="uid://6u4dcf1y0x5c" path="res://assets/tanisha assets/art/DarkSkyLoop.png" id="1_bodal"]
-[ext_resource type="Texture2D" uid="uid://dbbyh37civ2wb" path="res://assets/tanisha assets/art/BG-HouseGroundLoop.png" id="2_kdmts"]
+[ext_resource type="Script" uid="uid://bhy0dm6wdyulg" path="res://scripts/start.gd" id="1_pgjjs"]
+[ext_resource type="Script" uid="uid://chaovihahiqem" path="res://scripts/FogMove.gd" id="1_y16t7"]
+[ext_resource type="Texture2D" uid="uid://bdy0ohsvi84kh" path="res://assets/tanisha assets/art/LightSkyLoop.png" id="2_4ge6i"]
 [ext_resource type="FontFile" uid="uid://2m3agwgeselk" path="res://assets/tanisha assets/font/Abel-Regular.ttf" id="3_0auqf"]
+[ext_resource type="Texture2D" uid="uid://c40do7uon803d" path="res://assets/tanisha assets/art/HouseLoop.PNG" id="3_8itgj"]
+[ext_resource type="Texture2D" uid="uid://c8qk3k6l23w6i" path="res://assets/tanisha assets/art/FogLoop.PNG" id="4_tn317"]
+[ext_resource type="PackedScene" uid="uid://dmbb6tkng254y" path="res://scenes/lamp2.tscn" id="6_tn317"]
+[ext_resource type="Texture2D" uid="uid://dyb8dxw2tp8da" path="res://assets/tanisha assets/art/Screens/Opening Screen Button.png" id="6_y16t7"]
+[ext_resource type="Texture2D" uid="uid://c0i4kdsroi0t0" path="res://assets/tanisha assets/art/Screens/Light Horror.png" id="7_m8nf6"]
+[ext_resource type="Texture2D" uid="uid://dn1h28jocaam4" path="res://assets/tanisha assets/art/Screens/Button.png" id="8_m8nf6"]
+[ext_resource type="Texture2D" uid="uid://tpect0clq2cv" path="res://assets/tanisha assets/art/Screens/Game by Megan and Tanisha.png" id="8_pgjjs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgjjs"]
+
+[sub_resource type="Animation" id="Animation_gsp51"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1205)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text 1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Start Menu/Credits:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Start Menu/Begin:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Start Menu:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-653, 133)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Transition Block:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Transition Block:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pgjjs"]
+resource_name = "one"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text 1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1nvso"]
+resource_name = "two"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1205), Vector2(0, -637)]
+}
+
+[sub_resource type="Animation" id="Animation_r8uic"]
+resource_name = "three"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -637), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x1pfr"]
+resource_name = "four"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Start Menu/Credits:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Start Menu/Begin:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Start Menu:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-653, 133), Vector2(-653, 49)]
+}
+
+[sub_resource type="Animation" id="Animation_n0tym"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition Block:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition Block:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8jfef"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition Block:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition Block:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r8uic"]
+_data = {
+&"RESET": SubResource("Animation_gsp51"),
+&"fade_in": SubResource("Animation_8jfef"),
+&"fade_out": SubResource("Animation_n0tym"),
+&"four": SubResource("Animation_x1pfr"),
+&"one": SubResource("Animation_pgjjs"),
+&"three": SubResource("Animation_r8uic"),
+&"two": SubResource("Animation_1nvso")
+}
 
 [node name="Start" type="Node2D"]
+script = ExtResource("1_pgjjs")
 
-[node name="Sky" type="Sprite2D" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, 561)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(8801, 0)
+script = ExtResource("1_y16t7")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+texture = ExtResource("2_4ge6i")
+
+[node name="Houses" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(2298.8, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Houses"]
+position = Vector2(0, 54)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("1_bodal")
+texture = ExtResource("3_8itgj")
 
-[node name="Houses" type="Sprite2D" parent="."]
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_kdmts")
+[node name="Behind Fog" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 1
+position = Vector2(0, -41)
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(4000, 0)
+script = ExtResource("1_y16t7")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Behind Fog"]
+texture = ExtResource("4_tn317")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -233.0
-offset_top = 81.0
-offset_right = 240.0
-offset_bottom = 226.0
-theme_override_fonts/normal_font = ExtResource("3_0auqf")
-theme_override_font_sizes/normal_font_size = 100
-text = "Light Horror"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="."]
+[node name="Text 1" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = 219.0
-offset_right = 46.0
-offset_bottom = 279.0
+offset_left = -397.0
+offset_top = -1392.0
+offset_right = 397.0
+offset_bottom = -1050.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_0auqf")
-theme_override_font_sizes/font_size = 40
-text = "begin"
+theme_override_fonts/normal_font = ExtResource("3_0auqf")
+theme_override_font_sizes/normal_font_size = 50
+text = "An experiment gone horribly wrong 
+has twisted your DNA, 
+making you fatally vulnerable to light."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text 2" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -548.0
+offset_top = -859.0
+offset_right = 548.0
+offset_bottom = -420.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_0auqf")
+theme_override_font_sizes/normal_font_size = 50
+text = "Navigate the eerie streets,
+avoid the deadly street lights,
+and find the ingredients for your cure
+before the time runs out."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -653.0
+offset_top = 133.0
+offset_right = -613.0
+offset_bottom = 173.0
+
+[node name="Title" type="Control" parent="Start Menu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 52.0
+offset_right = 92.0
+offset_bottom = 40.0
+scale = Vector2(0.7, 0.7)
+
+[node name="Lamp2" parent="Start Menu/Title" instance=ExtResource("6_tn317")]
+position = Vector2(302, 142)
+
+[node name="Title Text" type="TextureRect" parent="Start Menu/Title"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = -211.0
+offset_right = 1759.0
+offset_bottom = 108.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_m8nf6")
+
+[node name="Begin" type="Control" parent="Start Menu"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 993.0
+offset_top = 189.0
+offset_right = 1033.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+
+[node name="TextureRect" type="TextureRect" parent="Start Menu/Begin"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -808.5
+offset_top = -154.5
+offset_right = -457.5
+offset_bottom = -43.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_m8nf6")
+
+[node name="Button" type="Button" parent="Start Menu/Begin"]
+layout_mode = 0
+offset_left = -788.0
+offset_top = -133.0
+offset_right = -438.0
+offset_bottom = -23.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pgjjs")
+
+[node name="Credits" type="Control" parent="Start Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 613.0
+offset_top = 79.0
+offset_right = 653.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+
+[node name="Credits" type="TextureRect" parent="Start Menu/Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.5
+offset_top = -28.0
+offset_right = 315.5
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_pgjjs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -1205)
+
+[node name="image" type="Sprite2D" parent="."]
+position = Vector2(-1478, -427)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_y16t7")
+
+[node name="ParallaxForeground" type="ParallaxBackground" parent="."]
+layer = -1
+
+[node name="Front Fog" type="ParallaxLayer" parent="ParallaxForeground"]
+z_index = 50
+motion_scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(2000, 0)
+script = ExtResource("1_y16t7")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxForeground/Front Fog"]
+position = Vector2(0, 135)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_tn317")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_r8uic")
+}
+
+[node name="Transition Block" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+offset_left = -1274.0
+offset_top = -668.0
+offset_right = 1518.0
+offset_bottom = 859.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="button_up" from="Start Menu/Begin/Button" to="." method="_on_button_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

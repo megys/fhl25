@@ -1,7 +1,7 @@
 extends Node
 
-@onready var label = $Time
-@onready var timer = $Countdown
+@onready var label: Label = $UI/Time
+@onready var timer: Timer = $UI/Countdown
 
 func _ready():
 	timer.start()
